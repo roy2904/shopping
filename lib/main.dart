@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'FadeAnimation.dart';
 import 'Shoes.dart';
 
 void main() => runApp(
@@ -47,7 +48,7 @@ class _HomePageState extends State<HomePage> {
           padding: EdgeInsets.all(20),
           child: Column(
             children: <Widget>[
-              Container(
+              FadeAnimation(1.3,Container(
                 height: 40,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
@@ -129,11 +130,13 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-              ),
+              ),),
               SizedBox(height: 20),
-              makeCard(tag: 'one', image: 'assets/images/one.jpg', isWhite: false),
-              makeCard(tag: 'two', image: 'assets/images/two.jpg', isWhite: false),
-              makeCard(tag: 'three', image: 'assets/images/three.jpg',isWhite: true),
+              FadeAnimation(1.5,makeCard(tag: 'one', image: 'assets/images/one.jpg', isWhite: false),),
+              FadeAnimation(1.7,makeCard(tag: 'two', image: 'assets/images/two.jpg', isWhite: false),),
+              FadeAnimation(1.9,makeCard(tag: 'three', image: 'assets/images/three.jpg',isWhite: true),),
+              FadeAnimation(2.1,makeCard(tag: 'four', image: 'assets/images/four.jpg',isWhite: false),),
+              FadeAnimation(2.3,makeCard(tag: 'five', image: 'assets/images/five.jpg',isWhite: false),),
             ],
           ),
         ),
